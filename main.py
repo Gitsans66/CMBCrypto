@@ -45,8 +45,8 @@ def start2(message):
 
 def SPAM():
 	for key in users:
-		content = requests.get('https://ru.investing.com/crypto/{}'.format(users[key].replace(' ', '-')), headers = HEADERS).content
-		soup = BeautifulSoup(content, 'html.parser')
+		contents = requests.get('https://ru.investing.com/crypto/{}'.format(users[key].replace(' ', '-')), headers = HEADERS).content
+		soup = BeautifulSoup(contents, 'html.parser')
 		change = soup.findAll('span', 'parentheses')[0].text.replace(',', '.')
 
 		if change[0] == '-':
