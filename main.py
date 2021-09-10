@@ -25,7 +25,7 @@ def save():
 	for key in users:
 		string = str(key) + ':' + users[key]
 		mas.append(string)
-	open('users.txt', 'w', errors = 'ignore').write('\n'.join())
+	open('users.txt', 'w', errors = 'ignore').write('\n'.join(mas))
 
 def shedule_checker():
 	while True:
